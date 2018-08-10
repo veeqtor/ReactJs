@@ -2,7 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Route } from 'react-router-dom';
 import Homepage from './components/pages/homepage';
-import LoginPage from './components/pages/login';
+import LoginPage from './components/pages/loginPage';
 import './App.css';
 
 const App = () => (

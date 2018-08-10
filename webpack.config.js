@@ -10,7 +10,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['env', 'react'] },
+        options: { presets: ['env', 'react', 'stage-2'] },
       },
       {
         test: /\.css$/,
@@ -40,6 +40,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/build/',

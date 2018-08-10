@@ -3,6 +3,7 @@
   "plugins": [
     "react"
   ],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -25,10 +26,12 @@
     "max-len": [1, 80, 2,
       {
         "ignoreUrls": true,
-        "ignoreStrings": true
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
       }
     ],
     "indent": ["error", 2],
+    "react/jsx-one-expression-per-line": 0,
     "max-depth": ["error", 5],
     "jsx-a11y/label-has-for": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
