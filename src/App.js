@@ -1,14 +1,18 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import './App.scss';
 import Homepage from './components/pages/homepage';
 import LoginPage from './components/pages/loginPage';
-import './App.css';
+
 
 const App = () => (
-  <div className="ui container">
-    <Route path="/" exact component={Homepage} />
-    <Route path="/login" exact component={LoginPage} />
+  <div>
+    <Switch>
+      <Route path="/" exact component={Homepage} />
+      <Route path="/login" exact component={LoginPage} />
+      <Redirect from="*" to="/" />
+    </Switch>
   </div>
 );
 

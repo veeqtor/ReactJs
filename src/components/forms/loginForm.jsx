@@ -10,7 +10,6 @@ class LoginForm extends React.Component {
         email: '',
         password: '',
       },
-      loading: false,
       errors: {},
     };
 
@@ -27,7 +26,7 @@ class LoginForm extends React.Component {
     const errors = this.validate(data);
     this.setState({ errors });
     if (Object.keys(errors).length === 0) {
-      submit(data);
+      submit(data, true);
     }
   }
 
@@ -40,9 +39,9 @@ class LoginForm extends React.Component {
   };
 
   render() {
-    const { data, errors, loading } = this.state;
+    const { data, errors } = this.state;
     return (
-      <Form onSubmit={this.onSubmit} loading={loading}>
+      <Form className="innerForm" size="tiny" onSubmit={this.onSubmit}>
         {/* Converting to boolean, errors object */}
         <Form.Field error={!!errors.email}>
           <label htmlFor="email">Email</label>
@@ -68,7 +67,7 @@ class LoginForm extends React.Component {
           />
           {errors.password && <InlineErrors text={errors.password} />}
         </Form.Field>
-        <Button primary type="submit">Login</Button>
+        <Button className="btn" type="submit">Login</Button>
       </Form>
     );
   }

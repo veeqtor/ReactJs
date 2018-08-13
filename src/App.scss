@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Raleway');
+
+#root {
+    .loginForm {
+        height: 450px;
+        border-radius: 3px;
+    }
+    .body{
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .formStyle {
+        background: #f9f9f9 !important;
+        padding: 50px !important;
+        min-height: 580px;
+        max-width: 500px;
+        margin: 0 auto !important;
+    }
+
+    .innerForm{
+        padding-top: 100px;
+    }
+
+    .btn{
+        border: 1px solid grey !important;
+        background: transparent !important;
+        display: block !important;
+        width: 100%;
+        padding: 0.45em !important;
+        margin: 3em 0 !important;
+    }
+
+    .header1{
+        color: #27494A;
+        font-family: 'Raleway';
+        font-size: 3em;
+        text-align: center;
+    }
+    .header2{
+        color: #27494A;
+        font-family: 'Raleway';
+        font-size: 1.7em;
+        text-align: center;
+    }
+    .andela{
+        background-image: url(../src/components/assets/RaceTo500Wallpaper.png);
+        background-position: center;
+        background-attachment: fixed;
+        height: 170%;
+    }
+    .footer {
+        background-color: #494949;
+        width: 100%;
+        // height: 50px;
+        position: fixed;
+        bottom: 0;
+        padding: 2em 0em;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // font-size: 12px;
+        // text-align: center;
+
+        h4{
+            color: rgb(255, 255, 255);
+            font-family: 'Raleway';
+            font-size: 1.7em;
+            // text-align: center;
+          }
+        p, a{
+            color: #e5e5e5;
+          }
+    }
+
+}
